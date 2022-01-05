@@ -1,0 +1,11 @@
+- var sortingTypes = ['По возрастанию', 'По убыванию', 'По цене', 'По хуйне']
+
+.catalog__page
+    +breadcrumps('catalog__breadcrumps', 'Каталог', 'Аналог', 'Сосалог')
+    h1.catalog__title Каталог
+    .catalog__sort Сортировать по
+        +dropdown(sortingTypes)
+    .catalog__pagination#pagination
+    .catalog__content
+        .sec__listing.products-listing.products-listing--two-rows
+            +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')

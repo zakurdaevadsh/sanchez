@@ -1,0 +1,19 @@
+.paginationjs{
+  li{
+    border: 0 none !important;
+  }
+  li.paginationjs-page{
+    //border: 0 none;
+    a{
+      color: $black;
+      transition: background-color .3s;
+    }
+    &.active{
+      a{
+        background-color: $black;
+        color: white;
+        border-radius: 0;
+      }
+    }
+  }
+}

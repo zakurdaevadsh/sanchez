@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+    head
+        include mixin/meta
+        title CATALOG
+        include mixin/styles
+    body.catalog
+        include mixin/mixin
+        include header/header
+        main
+            .wrapper
+                include catalog/catalog
+        include footer/footer
+    include mixin/scripts
+
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css")
+    script(src="https://unpkg.com/swiper/swiper-bundle.js")

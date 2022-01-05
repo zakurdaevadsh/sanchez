@@ -1,0 +1,17 @@
+@import "libs/normalize";
+@import "libs/pagination";
+
+@import "mixin/fonts";
+@import "mixin/base";
+@import "mixin/mixins";
+@import "mixin/modals";
+@import "mixin/libs";
+
+@import "header/header";
+@import "footer/footer";
+
+//pages
+
+@import "index/index";
+@import "auth/auth";
+@import "catalog/catalog";

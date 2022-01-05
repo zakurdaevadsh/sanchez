@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+    head
+        include mixin/meta
+        title INDEX
+        include mixin/styles
+    body.index
+        include mixin/mixin
+        include header/header
+        main
+            include index/index
+        include footer/footer
+        include mixin/modals
+        include mixin/scripts
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css")
+    script(src="https://unpkg.com/swiper/swiper-bundle.js")
+    script(src='js/index.min.js')

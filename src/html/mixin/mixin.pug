@@ -1,0 +1,37 @@
+mixin arrow_btns(local_class)
+    .arrow-btns(class=local_class)
+        .arrow-btns__item.icon-arrow.arrow-btns__item--left.link
+        .arrow-btns__item.icon-arrow.arrow-btns__item--right.link
+
+mixin product_item(local_class, likes, image, brand, type, size, price)
+    .product(class=local_class)
+        .product__likes.icon-heart.text.link= likes
+        img.product__image(src=image)
+        .product__footer
+            .product__description
+                .product__brand.link= brand
+                .product__type= type
+                .product__size='Размер: '+size
+            .product__price= price+' ₽'
+
+mixin breadcrumps(local_class, item_1, item_2, item_3)
+    .breadcrumps(class=local_class)
+        .breadcrumps__item.item.link Главная
+        .breadcrumps__arrow.icon-arrow
+        a.breadcrumps__item.item.link(href='#')= item_1
+        if (item_2)
+            .breadcrumps__arrow.icon-arrow
+            a.breadcrumps__item.item.link(href='#')= item_2
+            if (item_3)
+                .breadcrumps__arrow.icon-arrow
+                a.breadcrumps__item.item.link(href='#')= item_3
+
+
+mixin dropdown(content)
+    .dropdown
+        .dropdown__input.icon-arrow
+            input.dropdown__input-item.input(type='text' readonly value=content[0])
+        .dropdown__container
+            .dropdown__container-content
+                each item in content
+                    .dropdown__container-item.link=item

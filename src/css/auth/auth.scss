@@ -1,0 +1,116 @@
+.auth{
+  &__header{
+    background-color: $black;
+    color: white;
+
+    @include tablet{
+      display: none;
+    }
+
+    &-content{
+      padding: 42px 0;
+      font-family: $font_cg;
+      text-align: center;
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+
+  &__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+
+  &__tabs{
+    display: none;
+    padding-top: 23px;
+    &-item{
+      width: 50%;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: 300;
+      border-bottom: 1px solid $grey;
+      &.active{
+        color: $active;
+        border-bottom: 2px solid $active;
+      }
+    }
+    @include tablet{
+      display: flex;
+    }
+  }
+
+  &__forms{
+    padding: 138px 0 0;
+    display: flex;
+    @include tablet{
+      &.active{
+        .auth__form.auth__form{
+          &--left{
+            display: none;
+          }
+          &--right{
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  &__form{
+    padding: 0 125px 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+      width: 100%;
+      padding: 0;
+    }
+    &-title{
+      font-family: $font_cg;
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 41px;
+      @include tablet{
+        text-align: center;
+      }
+    }
+    .input{
+      margin-bottom: 24px;
+      width: 311px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      @include tablet{
+        width: 100%;
+      }
+    }
+
+    &--right{
+      border-left: 1px solid $black;
+      @include tablet{
+        border-left: 0 none;
+        display: none;
+      }
+    }
+  }
+
+  &__link{
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 24px;
+    text-decoration: underline;
+  }
+
+  &__btn{
+    margin-top: 46px;
+    width: 230px;
+    @include tablet{
+      width: 100%;
+    }
+  }
+}

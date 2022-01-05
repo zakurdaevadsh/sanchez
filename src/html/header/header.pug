@@ -1,0 +1,55 @@
+mixin submenu_item(isDeep)
+    .header__submenu-item
+        if (!isDeep)
+            a.header__submenu-label.link(href='#') Одежда
+        else
+            .header__submenu-label.icon-arrow Одежда
+            .header__submenu-list
+                a.header__submenu-link.link(href='#') Одежда
+                a.header__submenu-link.link(href='#') Одежда
+                a.header__submenu-link.link(href='#') Одежда
+                a.header__submenu-link.link(href='#') Одежда
+                a.header__submenu-link.link(href='#') Одежда
+                a.header__submenu-link.link(href='#') Одежда
+
+header.header
+    .wrapper
+        .header__burger.js-burger-btn
+            .header__burger-line
+            .header__burger-line
+            .header__burger-line
+        a.header__logo(href='#')
+            img(alt='NBGoods logo', src='images/nbgLogo.svg')
+        a.header__logo--mobile(href='#')
+            //img(alt='NBGoods logo', src='images/nbgLogo.svg')
+            div NotBadGoods
+        .header__navi
+            .header__navi-top
+                .header__navi-top-logo NotBadGoods
+                .header__navi-top-cross.js-burger-cross
+            .header__navi-item.item.link Женское
+            .header__navi-item.item.link Мужское
+            .header__navi-item.item.link Детское
+            .header__navi-item.item.link Новые поступления
+            .header__navi-item.item.link Бренды
+            .header__navi-item.item.link Обувь
+            .header__navi-item.item.link Аксессуары
+            .header__navi-item.item.link Бижутерия
+            .header__navi-item.item.link Акции
+        .header__actions
+            .header__actions-item.icon-search.link
+            .header__actions-item.icon-user.link
+            .header__actions-item.icon-heart.link
+            .header__actions-item.icon-cart.link
+                .header__actions-item-cart 3
+    .header__submenu
+        .header__submenu-close.icon-arrow.js-submenu-close
+        .wrapper
+            +submenu_item(true)
+            +submenu_item(true)
+            +submenu_item()
+            +submenu_item(true)
+            +submenu_item()
+            +submenu_item(true)
+            +submenu_item()
+            +submenu_item()

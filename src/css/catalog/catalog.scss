@@ -1,0 +1,38 @@
+.catalog{
+  height: 100%;
+
+  &__breadcrumps{
+    width: 100%;
+    margin-bottom: 74px;
+  }
+  &__page{
+    padding: 58px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  &__title{
+    margin-right: auto;
+  }
+
+  &__sort{
+    display: flex;
+    margin-right: 28px;
+    align-items: center;
+    .dropdown{
+      margin-left: 28px;
+    }
+    .input{
+      padding: 10px 36px 10px 14px;
+    }
+  }
+
+  &__pagination{
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+
+}

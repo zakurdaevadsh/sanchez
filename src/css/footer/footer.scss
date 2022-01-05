@@ -1,0 +1,54 @@
+.footer{
+  margin-top: auto;
+  background-color: $black;
+  color: white;
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 200px;
+    @include tablet{
+      padding: 50px 40px;
+    }
+    @include tablet_old{
+      flex-direction: column;
+      justify-content: unset;
+    }
+  }
+
+  &__column{
+    font-size: 14px;
+    line-height: 20px;
+    @include tablet_old{
+      margin-bottom: 30px;
+    }
+
+    &-label{
+      padding: 10px 0;
+      font-weight: bold;
+      @include tablet_old{
+        margin-bottom: 12px;
+      }
+    }
+
+    &-list{
+      display: flex;
+      flex-direction: column;
+    }
+    &-item{
+      padding: 10px 0;
+      @include tablet_old{
+        padding: 6px 0;
+      }
+    }
+  }
+
+  &__logo{
+    font-family: $font_cg;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 18px;
+  }
+}

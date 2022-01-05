@@ -1,0 +1,328 @@
+@mixin lil-desktop {
+  @media (max-width: 1330px) {
+    @content;
+  }
+}
+
+.header{
+  position: sticky;
+  top: 0;
+  height: 88px;
+  box-shadow: 2px 6px 10px #EDEBEB;
+  z-index: 15;
+  background-color: white;
+
+  @include tablet{
+    height: 56px;
+    &.show-mobile-burger{
+      .header__navi{
+        right: 0;
+      }
+    }
+  }
+
+  &__burger{
+    display: none;
+    flex-direction: column;
+    height: 24px;
+    width: 24px;
+    justify-content: space-around;
+    cursor: pointer;
+    &-line{
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      transition: background-color .3s;
+    }
+    &:hover{
+      .header__burger-line{
+        background-color: $active;
+      }
+    }
+    @include tablet{
+      display: flex;
+    }
+  }
+
+  .wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include tablet{
+      justify-content: space-between;
+    }
+  }
+
+  &__logo{
+    width: 81px;
+    margin-right: 50px;
+    @include lil-desktop{
+      margin-right: 15px;
+    }
+    @include tablet{
+      display: none;
+    }
+    &--mobile{
+      display: none;
+      @include tablet{
+        display: flex;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+
+
+  &__navi{
+    display: flex;
+    margin-right: 5px;
+    &-item{
+      white-space: nowrap;
+      margin-right: 30px;
+      @include lil-desktop{
+        margin-right: 10px;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      @include tablet{
+        margin-right: 0;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 25px 16px;
+        border-bottom: 1px solid $grey;
+        width: 100%;
+      }
+    }
+
+    &-top{
+      display: none;
+      width: 100%;
+      height: 28px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      &-cross{
+        position: relative;
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+        &:after,
+        &:before{
+          position: absolute;
+          content: '';
+          width: 25px;
+          height: 2px;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%) rotate(45deg);
+          background-color: $black;
+          transition: background-color .3s;
+        }
+        &:after{
+          transform: translateY(-50%) rotate(-45deg);
+        }
+        &:hover{
+          &:after,
+          &:before{
+            background-color: $active;
+          }
+        }
+      }
+    }
+    @include tablet{
+      padding: 16px 0;
+      margin-right: 0;
+      position: fixed;
+      top: 0;
+      right: 100%;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      background-color: white;
+      z-index: 9;
+      transition: right .5s;
+      overflow: scroll;
+      &-top{
+        display: flex;
+      }
+    }
+  }
+
+  &__actions{
+    margin-left: auto;
+    display: flex;
+    width: Min(216px, 100%);
+    justify-content: space-between;
+    @include lil-desktop {
+      width: Min(150px, 100%);
+    }
+    &-item{
+      font-size: 24px;
+      line-height: 24px;
+      position: relative;
+      &-cart{
+        position: absolute;
+        font-family: $font_m;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 19px;
+        height: 19px;
+        width: 19px;
+        text-align: center;
+        color: white;
+        background-color: $red;
+        border-radius: 50%;
+        right: 0;
+        top: 0;
+        transform: translate(45%, -45%);
+      }
+    }
+    @include tablet{
+      margin-left: unset;
+    }
+  }
+
+  &__submenu{
+    width: 100vw;
+    position: fixed;
+    top: 86px;
+    background: white;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    &:before{
+      content: '';
+      display: flex;
+      margin: 0 auto;
+      width: Min(1380px, 100vw);
+      height: 1px;
+      background-color: $black;
+    }
+    &-close{
+      display: none;
+      margin-top: 10px;
+      &:before{
+        line-height: 24px;
+        font-size: 24px;
+      }
+    }
+
+    .wrapper{
+      padding-top: 17px;
+      padding-bottom: 17px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: Min(160px, 100%);
+      align-items: start;
+    }
+
+    &-item{
+      margin: 28px 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-label{
+      font-weight: bold;
+      margin-bottom: 18px;
+      &:before{
+        content: unset;
+      }
+    }
+    &-list{
+      display: flex;
+      flex-direction: column;
+    }
+    &-link{
+      margin: 6px 0;
+    }
+    @include tablet{
+      display: flex;
+      top: 60px;
+      height: calc(100vh - 60px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      right: 100%;
+      transition: right .3s;
+      &-close{
+        display: flex;
+        @include link;
+      }
+      .wrapper{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: unset;
+        padding-left: 48px;
+        height: min-content;
+      }
+      &-item{
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid $grey;
+        &.item-opened{
+          .header__submenu-label:before{
+            transform: translateY(-50%) rotate(-90deg);
+          }
+          .header__submenu-list{
+            max-height: unset;
+          }
+        }
+      }
+      &-label{
+        margin-bottom: 0;
+        padding: 25px 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        @include link;
+        &:before{
+          content: unset;
+        }
+        &:not(a){
+          position: relative;
+          &:before{
+            content: '\e800';
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%) rotate(90deg);
+            transition: .3s;
+          }
+        }
+      }
+      &-list{
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .3s;
+      }
+      &-link{
+        padding: 13px 0 13px 30px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &.show-submenu{
+    .header__submenu{
+      display: flex;
+    }
+    @include tablet{
+      .header__submenu{
+        right: 0;
+      }
+    }
+  }
+}

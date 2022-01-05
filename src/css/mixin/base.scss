@@ -1,0 +1,196 @@
+// variables
+
+$font_cg: 'Cormorant Garamond', serif;
+$font_m: 'Montserrat', sans-serif;
+
+$black: #252525;
+$active: #AA8372;
+$red: #DD2C2C;
+$grey: #C1C1C1;
+$grey_text: #AEAEAE;
+$grey_bg: #F5F5F5;
+
+$breakpoint_tablet: 1024px;
+$breakpoint_tablet_old: 768px;
+$breakpoint_mobile: 425px;
+
+@mixin tablet {
+  @media (max-width: $breakpoint_tablet) {
+    @content;
+  }
+}
+
+@mixin tablet_old {
+  @media (max-width: $breakpoint_tablet_old) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint_mobile) {
+    @content;
+  }
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,a{
+  margin: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+.input,
+textarea,
+select{
+  font-family: $font_m;
+  &::placeholder,
+  &::-moz-placeholder,
+  &::-webkit-input-placeholder,
+  &::-ms-input-placeholder{
+    font-family: $font_m;
+  }
+  &[disabled]{
+    background-color: $grey;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+ul,
+li{
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  border: 0 none;
+}
+
+a{
+  margin: 0;
+  color: unset;
+  text-decoration: unset;
+}
+
+body{
+  @extend .text;
+  color: $black;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: .05em;
+}
+
+main{
+  width: 100vw;
+}
+
+.wrapper{
+  //width: #{'min(100vw, 1440px)'}; // можко та, можно менять регистр, тк цссу пох, а сассу нет
+  width: Min(100vw, 1440px);
+  padding: 0 40px;
+  margin: 0 auto;
+  @include tablet {
+    padding: 0 10px;
+  }
+}
+
+h1, .h1{
+  font-family: $font_cg;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 64px;
+  @include tablet_old{
+    font-size: 32px;
+    line-height: 56px;
+  }
+}
+
+h2, .h2{
+  font-family: $font_cg;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h3 .h3{
+  font-family: $font_cg;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4, .h4{
+  font-family: $font_cg;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.text{
+  font-family: $font_m;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text--m{
+  font-family: $font_m;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.item{
+  font-family: $font_m;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.link{
+  cursor: pointer;
+  transition: color .3s;
+  &:hover{
+    color: $active;
+  }
+}
+
+@mixin link {
+  cursor: pointer;
+  transition: color .3s;
+  &:hover{
+    color: $active;
+  }
+}
+
+//::-webkit-scrollbar{
+//  width: 4px;
+//  height: 4px;
+//
+//}
+//::-webkit-scrollbar-thumb{
+//  background-color: $active;
+//  border-radius: 5px;
+//}

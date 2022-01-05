@@ -1,0 +1,96 @@
+mixin news_item(image, label, description, date)
+    .news-item
+        .news-item__image
+            img(src=image)
+        .news-item__content
+            .news-item__title= label
+            .news-item__description.text= description
+            .news-item__date= date
+
+mixin category_item(image, label)
+    .category-item
+        img.category-item__img(src=image)
+        .category-item__content
+            .category-item__title=label
+            .category-item__btn.button--transparent В каталог
+
+mixin vintage_item(image, label)
+    a.vintage-item(href='#')
+        .vintage-item__img
+            img(src= image)
+        .vintage-item__label= label
+
+mixin selling_point(label)
+    .selling-points__item
+        .selling-points__title=label
+        ul
+            li.selling-points__feature это
+            li.selling-points__feature просто
+            li.selling-points__feature ахуенно
+
+
+.index
+    include bannerSec
+    section.sec.index__bg-light
+        .wrapper
+            h1.sec__title.h1 Новинки
+            +arrow_btns('sec__arrows')
+            .sec__listing.products-listing.products-listing--two-rows
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+            .button--colored Перейти в каталог
+    section.sec.index__bg-grey
+        .wrapper
+            h1.sec__title.h1 Новости
+            +arrow_btns('sec__arrows')
+            .sec__listing.products-listing.products-listing--one-row
+                +news_item('images/news-item.png', 'When an unknown printer took a galley', 'When an unknown printer took a galley when an unknown printer took a galleywhen an unknown printer took a galleywhen an unknown printer took a galley', '06.08.2021')
+                +news_item('images/news-item.png', 'When an unknown printer took a galley', 'When an unknown printer took a galley when an unknown printer took a galleywhen an unknown printer took a galleywhen an unknown printer took a galley', '06.08.2021')
+                +news_item('images/news-item.png', 'When an unknown printer took a galley', 'When an unknown printer took a galley when an unknown printer took a galleywhen an unknown printer took a galleywhen an unknown printer took a galley', '06.08.2021')
+                +news_item('images/news-item.png', 'When an unknown printer took a galley', 'When an unknown printer took a galley when an unknown printer took a galleywhen an unknown printer took a galleywhen an unknown printer took a galley', '06.08.2021')
+            .button Посмотреть все
+    section.sec.index__bg-light
+        .wrapper
+            h1.sec__title.h1 Акции
+            +arrow_btns('sec__arrows')
+            .sec__listing.products-listing.products-listing--two-rows
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+                +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')
+            .button--colored Перейти в каталог
+    section.sec.index__bg-grey
+        .wrapper
+            .category
+                +category_item('images/hoodie.png', 'Худи')
+                +category_item('images/coat.png', 'Пальто')
+                +category_item('images/sweatshirt.png', 'Свитшот')
+    section.sec.index__bg-light
+        .wrapper
+            h1.sec__title.h1 Назад в 2000
+            .vintage
+                +vintage_item('images/vintage.png', 'Пиджаки')
+                +vintage_item('images/vintage.png', 'Пальто')
+                +vintage_item('images/vintage.png', 'Труханы')
+                +vintage_item('images/vintage.png', 'Носки')
+                +vintage_item('images/vintage.png', 'Соски')
+                +vintage_item('images/vintage.png', 'Мазки')
+    section.sec.index__bg-grey
+        .wrapper
+            .selling-points
+                .selling-points__image
+                .selling-points__list
+                    +selling_point('1. Экологично')
+                    +selling_point('2. Чисто')
+                    +selling_point('3. Качественно')
+
