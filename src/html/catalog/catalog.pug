@@ -10,35 +10,103 @@
         .btn-filter Фильтр
         .btn-sort Сортировка
 
-        .filter-stction Фильтр
-
-        .category-title Категория
-        .category-content Аксессуары Сумки Одежда Обувь
-
-        .size-section Размеры одежды
-        .size-content XXS XS S M L XL XXL
-
-        .view-section Вид одежды
-        .view-content 
-        input(type="text")
-        input type="checkbox" name="A Bathing Ape" id="A Bathing Ape"
-        label for="A Bathing Ape"
-        input type="checkbox" name="APC" id="APC"
-        label for="APC"
-        input type="checkbox" name="Acne Studios" id="Acne Studios"
-        label for="Acne Studios"
-        
-        .colors-section Цвета
-        .colors-content 
-
-        .price-section Цена
-        .price-content 
-        input type="range" min="5" max="10" step="0.01"
-        
-        .state-section Состояние
-        .state-content 
-        .btn-state-clear Очистить
-        .btn-state-apply Применить
+        .filter-section
+            .filter-section-top 
+                .filter-section-title Категория
+                .filter-section-icon
+            .filter-content
+                input(type="checkbox" name="Аксессуары" id="Accessories")
+                label(for="Accessories") Аксессуары
+                input(type="checkbox" name="Сумки" id="Handbags")
+                label(for="Handbags") Сумки
+                input(type="checkbox" name="Одежда" id="Cloth")
+                label(for="Cloth") Одежда
+                input(type="checkbox" name="Обувь" id="Shoes")
+                label(for="Shoes") Обувь
+        .filter-section
+            .filter-section-top
+                .filter-section-title Размеры одежды 
+                .filter-section-icon
+            .filter-content 
+                .filter-content--size 
+                     a.filter-link XXS 
+                .filter-content--size
+                     a.filter-link XS 
+                .filter-content--size
+                     a.filter-link S 
+                .filter-content--size
+                     a.filter-link M  
+                .filter-content--size
+                     a.filter-link L 
+                .filter-content--size
+                     a.filter-link XL 
+                .filter-content--size     
+                     a.filter-link XXL
+        .filter-section
+            .filter-section-top
+                .filter-section-title Вид одежды
+                .filter-section-icon
+            .filter-content 
+                input(type="text")
+                input(type="checkbox" name="A Bathing Ape" id="A Bathing Ape")
+                label(for="A Bathing Ape") A Bathing Ape
+                input(type="checkbox" name="APC" id="APC")
+                label(for="APC") APC
+                input(type="checkbox" name="Acne Studios" id="Acne Studios")
+                label(for="Acne Studios") Acne Studios
+                input(type="checkbox" name="A Bathing Ape" id="A Bathing Ape")
+                label(for="A Bathing Ape") A Bathing Ape
+                input(type="checkbox" name="APC" id="APC")
+                label(for="APC") APC
+                input(type="checkbox" name="Acne Studios" id="Acne Studios")
+                label(for="Acne Studios") Acne Studios
+                input(type="checkbox" name="A Bathing Ape" id="A Bathing Ape")
+                label(for="A Bathing Ape") A Bathing Ape
+                input(type="checkbox" name="APC" id="APC")
+                label(for="APC") APC
+                input(type="checkbox" name="Acne Studios" id="Acne Studios")
+                label(for="Acne Studios") Acne Studios
+        .filter-section
+            .filter-section-top
+                .filter-section-title Цвета
+                .filter-section-icon
+            .filter-content 
+                .filter-color-item.filter-color-item-beige
+                .filter-color-item.filter-color-item-black
+                .filter-color-item.filter-color-item-blue
+                .filter-color-item.filter-color-item-brown
+                .filter-color-item.filter-color-item-purple
+                .filter-color-item.filter-color-item-brown2
+                .filter-color-item.filter-color-item-white
+                .filter-color-item.filter-color-item-grey
+                .filter-color-item.filter-color-item-beige2
+                .filter-color-item.filter-color-item-green
+                .filter-color-item.filter-color-item-red
+                .filter-color-item.filter-color-item-green2
+                .filter-color-item.filter-color-item-blue2
+                .filter-color-item.filter-color-item-yellow
+                .filter-color-item.filter-color-item-blue3
+                .filter-color-item.filter-color-item-yellow2
+                .filter-color-item.filter-color-item-pink
+                .filter-color-item.filter-color-item-purple2
+                .filter-color-item.filter-color-item-multy
+                .filter-color-item.filter-color-item-white3
+                .filter-color-item.filter-color-item-no
+        .filter-section
+            .filter-section-top
+                .filter-section-title Цена
+                .filter-section-icon
+            .filter-content 
+            input(type="range" min="5" max="10" step="0.01")
+        .filter-section
+            .filter-section-top
+                .filter-section-title Состояние
+                .filter-section-icon
+            .filter-content 
+                .filter-content-condition
+                    a.btn-state-clear Очистить
+                .filter-content-condition  
+                    a.btn-state-apply Применить
 
         .sec__listing.products-listing.products-listing--two-rows
             +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')

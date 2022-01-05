@@ -47,4 +47,110 @@
     border: 1px solid #C1C1C1;
   }
 
+  & .filter-section-top{
+    display: flex;
+    justify-content: space-between;
+  }
+  & .filter-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  & .filter-content--size{
+    width: 40px;
+    height: 40px;
+    background: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  & .filter-color-item{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  & .filter-color-item.filter-color-item-beige{
+    background-color: #DFC4A3;
+  }
+  & .filter-color-item.filter-color-item-black{
+    background-color: #252525;
+  }
+  & .filter-color-item.filter-color-item-blue{  
+    background-color: #68A0F2;
+  }
+  & .filter-color-item.filter-color-item-brown{  
+    background-color: #A57738;
+  }
+  & .filter-color-item.filter-color-item-purple{ 
+    background-color: #A04551;
+  }
+  & .filter-color-item.filter-color-item-brown2{ 
+    background-color: #C6975A;
+  }
+  & .filter-color-item.filter-color-item-white{
+    background-color: #FBFCF2;
+    border: 2px solid #252525;
+    box-sizing: border-box;
+  }
+  & .filter-color-item.filter-color-item-grey{
+    background: #F8F9EC;
+  }
+  & .filter-color-item.filter-color-item-beige2{
+    background: #D5B766;
+  }
+  &  .filter-color-item.filter-color-item-green{
+    background: #89B379;
+  }
+  & .filter-color-item.filter-color-item-red{
+    background: #DD5252;
+  }
+  & .filter-color-item.filter-color-item-green2{
+    background: #97A463;
+  }
+  & .filter-color-item.filter-color-item-blue2{
+    background: #8DE4DD;
+  }
+  & .filter-color-item.filter-color-item-yellow{
+    background: #FAEC67;
+  }
+  & .filter-color-item.filter-color-item-blue3{
+    background: #325B8C;
+  }
+  & .filter-color-item.filter-color-item-yellow2{
+    background: #FFB449;
+  }
+  & .filter-color-item.filter-color-item-pink{
+    background: #FDC0D7;
+  }
+  & .filter-color-item.filter-color-item-purple2{
+    background: #BF55BD;
+  }
+  & .filter-color-item.filter-color-item-multy{
+
+  }
+  & .filter-color-item.filter-color-item-white3{
+    border: 1px solid #252525;
+    box-sizing: border-box;
+    background: #FBFCF2;
+  }
+  & .filter-color-item.filter-color-item-no{
+    border: 1px solid #252525;
+    box-sizing: border-box;
+    background: #FBFCF2;
+  }
+
+  & .filter-content-condition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 172px;
+    height: 40px;
+   
+  }
+  & .filter-content-condition:hover{
+    background-color: black;
+    color: white;
+  }
 }
