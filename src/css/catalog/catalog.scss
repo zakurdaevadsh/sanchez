@@ -34,5 +34,16 @@
     align-items: center;
   }
 
+  & btn-filter{
+    height:48px;
+    width: 187px;
+    border: 1px solid #C1C1C1;
+  }
+
+  & btn-sort{
+    height:48px;
+    width: 188px;
+    border: 1px solid #C1C1C1;
+  }
 
 }
