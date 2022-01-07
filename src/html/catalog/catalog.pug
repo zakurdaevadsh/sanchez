@@ -98,15 +98,11 @@
                 .filter-section-icon
             .filter-content 
             input(type="range" min="5" max="10" step="0.01")
-        .filter-section
-            .filter-section-top
-                .filter-section-title Состояние
-                .filter-section-icon
-            .filter-content 
-                .filter-content-condition
-                    a.btn-state-clear Очистить
-                .filter-content-condition  
-                    a.btn-state-apply Применить
+        .filter-controls
+                
+                    a.filter-btn Очистить
+ 
+                    a.filter-btn.filter-btn--black Применить
 
         .sec__listing.products-listing.products-listing--two-rows
             +product_item('products-listing__item sec__listing-item', '2', 'images/product_item.png', 'Canada goose', 'Куртка', 'XL', '9 500')

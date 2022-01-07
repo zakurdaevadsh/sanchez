@@ -141,6 +141,12 @@
     background: #FBFCF2;
   }
 
+  & .filter-controls{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px;
+  }
+
   & .filter-content-condition{
     display: flex;
     justify-content: center;
@@ -149,7 +155,7 @@
     height: 40px;
    
   }
-  & .filter-content-condition:hover{
+  & a.filter-content-condition{
     background-color: black;
     color: white;
   }
