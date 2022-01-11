@@ -6,11 +6,12 @@
     .catalog__sort Сортировать по
         +dropdown(sortingTypes)
     .catalog__pagination#pagination
-    .catalog__content
-        .btn-filter Фильтр
-        .btn-sort Сортировка
+    
     .catalog-container        
         .catalog-filter-column
+            .catalog__content
+            .btn-filter Фильтр
+            .btn-sort Сортировка
             .filter-title Фильтр
             .filter-section
                 .filter-section-top 
@@ -146,22 +147,19 @@
                 .filter-content 
                     .range-filter
                         .price-controls
-                            p От
-                            input(class="min-price" type="text" name="От" id="from")
-                            label(for="from")
-                            p До
-                            input(class="max-price" type="text" name="До" id="before")
-                            label(for="before")
-                            input(class="range-filter-checkbox" type="checkbox")
+                            div
+                                label(for="from") От
+                                input(class="filter-price-input" type="text" name="От" id="from" value="234")   
+                            div
+                                label(for="before") До
+                                input(class="filter-price-input" type="text" name="До" id="before" value="234")
+                            div    
+                                input(class="range-filter-checkbox" type="checkbox")
                         
                         .range-controls
                             .scale
-                                .min-toggle
-                                .max-toggle
-
-
-
-                input(type="range" min="5" max="10" step="0.01")
+                                .filter-toggle.filter-toggle--min
+                                .filter-toggle.filter-toggle--max
 
             .filter-section
                 .filter-section-top
