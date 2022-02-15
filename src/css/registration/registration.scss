@@ -1,0 +1,60 @@
+.registration-wrapper {
+    width: 100%;
+}
+.registration-banner__img {
+    display: block;
+    height: 232px;
+    background-image: url('/images/order-banner.svg');
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    margin: 0 -40px 152px -40px;
+}
+.registration-logo {
+    display: block;
+    width: 113px;
+}
+.order-banner__block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 42px;
+    padding-left: 40px;
+}
+.row1 {
+    display: flex;
+    padding-top: 42px;
+    padding-left: 40px;
+}
+.icon-back {
+    margin-right: 10px;
+}
+.back-in-basket {
+    color: white;
+    font-size: 0,875rem;
+}
+.registration-section__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.registration-section__title {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+}
+.registration-section__item {
+    width: 304px;
+    height: 48px;
+    border: 1px solid black;
+    margin-bottom: 16px;
+    padding-left: 16px;
+}
+.btn-registration {
+    width: 304px;
+    height: 48px;
+    background-color: black;
+    color: white;
+    padding: 13px 54px 13px 54px;
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+}
