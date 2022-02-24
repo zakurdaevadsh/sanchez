@@ -1,0 +1,11 @@
+doctype html
+html(lang="ru")
+    head
+        include mixin/meta
+        include mixin/styles
+    body.order-status
+        include mixin/mixin
+        main
+            .wrapper
+                include order_status/order_status
+    include mixin/scripts

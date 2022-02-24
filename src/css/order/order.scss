@@ -2,22 +2,6 @@
     .order-wrapper {
         width: 100%;
     }
-    .order-banner__img {
-        display: block;
-        height: 160px;
-        background-image: url('/images/order-banner.svg');
-        background-size: cover;
-        position: relative;
-        background-position: center;
-        margin: 0 -40px 0 -40px;
-    }
-    .order-logo {
-        display: block;
-        width: 113px;
-        right: 10px;
-        bottom: 13px;
-        position: absolute;
-    }
     .order-cart-amount__row {
         display: flex;
         justify-content: space-between;
@@ -150,29 +134,6 @@
 
 
 @media screen and (min-width: 541px) {
-    .order-banner__block {
-        display: flex;
-        padding-top: 42px;
-        padding-left: 40px;
-    }
-    .icon-back {
-        margin-right: 10px;
-    }
-    .back-in-basket {
-        color: white;
-        font-size: 0,875rem;
-    }
-    .order-logo {
-        display: block;
-        width: 180px;
-        height: 40px;
-        left: 20px;
-        bottom: 60px;
-        position: absolute;
-    }
-    .order-banner__img {
-        height: 232px;
-    }
     .order-cart-amount__row {
         display: none;
     }

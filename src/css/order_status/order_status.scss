@@ -1,0 +1,28 @@
+.order-status__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 264px;
+}
+.status-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.order-number {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.status-info {
+    font-size: 0.875rem;
+    color: #AEAEAE;
+    margin-bottom: 65px;
+}
+.btn-order__status {
+    width: 252px;
+    height: 48px;
+    background-color: black;
+    color: white;
+    padding: 13px 20px 13px 24px;
+    font-size: 1.125rem;
+}
